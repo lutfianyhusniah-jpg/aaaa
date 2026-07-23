@@ -1,94 +1,94 @@
-body{
-
-margin:0;
-background:#ede491;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-
-width:90%;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:40px 40px;
-justify-items:center;
-
+body {
+    margin: 0;
+    background: #ede491;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif; /* opsional */
 }
 
-img{
-
-width:100px;
-
+/* Container grid utama */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 40px;   /* jarak antar baris & kolom */
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.hand-container{
-    position: relative;
-    width: 120px;
-    height: 120px;
+/* Gaya dasar semua gambar di dalam container */
+.container img {
+    width: 100px;      /* ukuran dasar */
+    height: auto;
+    display: block;    /* hilangkan spasi bawah */
+    object-fit: contain;
 }
 
-.money{
-    width: 100px;
+/* Ukuran khusus untuk beberapa ikon agar lebih proporsional */
+.money {
+    width: 100px;      /* sama dengan default */
+}
+.coin {
+    width: 80px;
+}
+.loc {
+    width: 75px;
+}
+.ceklis {
+    width: 80px;
+}
+.paket {
+    width: 85px;
+}
+.luc {
+    width: 80px;
+}
+.air {
+    width: 80px;
+}
+.tulisan {
+    width: 80px;
+}
+.plane {
+    width: 110px;      /* pesawat lebih besar */
+}
+.ship {
+    width: 110px;      /* kapal lebih besar */
+}
+/* Tambahkan ukuran lain jika diperlukan */
+
+/* Efek hover untuk sentuhan interaktif (opsional) */
+.container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
 
-.coin{
-    position: absolute;
-    width: 90px;
-
-    top: 165px;      /* naik atau turun */
-    left: 365px;    /* geser kanan atau kiri */
-
+/* ---------- Responsif untuk layar kecil ---------- */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
 
-.loc{
-    position: absolute;
-    width: 90px;
-
-    top: 160px;      /* naik atau turun */
-    left: 1067px;    /* geser kanan atau kiri */
-
-}
-
-.ceklis{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 118px;    /* geser kanan atau kiri */
-}
-
-.paket{
-    position: absolute;
-    width: 90px;
-
-    top: 323px;      /* naik atau turun */
-    left: 357px;    /* geser kanan atau kiri */
-}
-
-.luc{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 598px;    /* geser kanan atau kiri */
-}
-
-.air{
-    position: absolute;
-    width: 90px;
-
-    top: 321px;      /* naik atau turun */
-    left: 826px;    /* geser kanan atau kiri */
-}
-
-.tulisan{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 1062px;    /* geser kanan atau kiri */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .container img {
+        width: 70px;   /* perkecil di HP */
+    }
+    /* sesuaikan ukuran khusus jika perlu */
 }
