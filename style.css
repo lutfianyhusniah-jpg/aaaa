@@ -1,94 +1,75 @@
-body{
-
-margin:0;
-background:#ede491;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-
-width:90%;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:40px 40px;
-justify-items:center;
-
+body {
+    margin: 0;
+    background: #ede491;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif; /* optional */
 }
 
-img{
-
-width:100px;
-
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 40px; /* jarak antar baris dan kolom */
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.hand-container{
-    position: relative;
-    width: 120px;
-    height: 120px;
+/* Gaya dasar semua gambar */
+.container img {
+    width: 100px; /* ukuran dasar */
+    height: auto;
+    display: block; /* menghilangkan spasi bawah */
+    object-fit: contain; /* jika diperlukan */
 }
 
-.money{
-    width: 100px;
+/* Ukuran khusus untuk beberapa icon agar lebih proporsional */
+.money {
+    width: 100px; /* sudah default, biarkan */
 }
-
-.coin{
-    position: absolute;
-    width: 90px;
-
-    top: 165px;      /* naik atau turun */
-    left: 365px;    /* geser kanan atau kiri */
-
+.coin {
+    width: 80px;
 }
-
-.loc{
-    position: absolute;
-    width: 90px;
-
-    top: 160px;      /* naik atau turun */
-    left: 1067px;    /* geser kanan atau kiri */
-
+.loc {
+    width: 75px;
 }
-
-.ceklis{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 118px;    /* geser kanan atau kiri */
+.ceklis {
+    width: 80px;
 }
-
-.paket{
-    position: absolute;
-    width: 90px;
-
-    top: 323px;      /* naik atau turun */
-    left: 357px;    /* geser kanan atau kiri */
+.paket {
+    width: 85px;
 }
-
-.luc{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 598px;    /* geser kanan atau kiri */
+.luc {
+    width: 80px;
 }
-
-.air{
-    position: absolute;
-    width: 90px;
-
-    top: 321px;      /* naik atau turun */
-    left: 826px;    /* geser kanan atau kiri */
+.air {
+    width: 80px;
 }
+.tulisan {
+    width: 80px;
+}
+/* Sesuaikan jika ada yang lebih besar/kecil */
+.plane {
+    width: 110px;
+}
+.ship {
+    width: 110px;
+}
+/* dll, sesuaikan dengan desain */
 
-.tulisan{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 1062px;    /* geser kanan atau kiri */
+/* Opsional: efek hover atau sentuhan */
+.container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
